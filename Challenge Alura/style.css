@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #FFFFFF;
+    --color-secundario: #0A3871;
+    --color-terciario: #343A40;
+
+    --color-hover: #868E96;
+   
+    --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    margin: auto;
+    z-index: 2000;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo del contenido del header */
+    margin: 0 auto; /* Centra el contenido dentro del header */
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.titulo {
+    font-size: 48px;
+}
+
+.header__logo {
+    padding: 2.5% 0% 1% 2.5%;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5% 15%;/*Verificar hasta ajustar la pantalla*/
+    justify-content: space-between;
+}
+
+.ctr__encriptador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 56.5%;
+    height: 697px;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    font-size: medium;
+ }
+
+.ctr__encriptador__texto {
+    width: auto;
+    height: auto;
+    border-radius: 3%;
+    border: 1px solid var(--color-secundario);
+    text-transform: initial;
+    margin-bottom: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px solid #135D66;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1.5rem; /*32px*/
+    line-height: 48px;
+    color: var(--color-secundario);
+}
+
+.ctr__encriptador__texto:focus {
+    outline: none;
+}
+
+.ctr__reglas {
+    display: flex;
+    justify-content: flex-start;
+    width: 250px;
+    height: 18px;
+    gap: 8px;
+    opacity: 80%;
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 0.75rem; /*12px*/
+    line-height: 18px;    
+}
+
+.ctr__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 577px; 
+    height: 67px;
+    margin-top: 16px;
+    gap: 24px;
+}
+
+.ctr__btn-encriptar {
+    width: 56.5%; /*328px, 56.5%*/
+    height: 67px;
+    border-radius: 24px;
+    padding: 24px 0;
+    gap: 8px;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /*16px*/
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+.ctr__btn-desencriptar {
+    width: 56.5%; /*328px, 56.5%*/
+    height: 67px;
+    border-radius: 24px;
+    padding: 24px 0;
+    gap: 8px;
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-secundario);;
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /*16px*/
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-secundario);;
+}
+
+.res__encriptador {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    width: 625%px;
+    height: 697px; /*Verificar hasta ajustar*/
+    gap: 60px; /*Verificar hasta ajustar*/
+}
+
+.res__encriptador__mensaje {
+    width: 336px;
+    height: 304px;
+    border-radius: 3%;
+    border: none;
+    background-image: url("/assets/muneco.png");
+    background-repeat: no-repeat;
+}
+
+.res__informativo {
+    width: 336px;
+    height: 122px;
+    gap: 16;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.res__informativo_mone {
+    width: 336px;
+    height: 58px;
+    font-family: var( --fuente-inter);
+    font-weight: 700;
+    font-size: 1.5rem; /*24px*/
+    line-height: 28px;
+    text-align: center;
+    color: #343A40;
+}
+
+.res__informativo_mtwo {
+    width: 336px;
+    height: 48px;
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /*16px*/
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-terciario);
+    margin-top: 16px;
+}
+
+.res__btn-copiar {
+    width: 328px; /*328px, 625%*/
+    height: 67px;
+    border-radius: 24px;
+    margin-top: 40px;
+    gap: 8px;
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-secundario);
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /*16px*/
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+.ctr__btn-encriptar:hover,
+.ctr__btn-desencriptar:hover,
+.res__btn-copiar:hover {
+    background-color: var(--color-hover);
+}
+
+footer h4 {
+    background-color: var(--color-terciario);;
+    padding: 10px;
+    font-family: var( --fuente-inter);
+    font-weight: 400;
+    font-size: 1rem; /*16px*/
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-primario);
+}
+
+/*Media query para pantallas menores a 1200px*/
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+
+    .header__logo {
+        justify-content: flex-start;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 5%;
+     }
+
+    textarea {
+        width: auto;
+     }
+
+     .ctr__encriptador,
+     .res__encriptador {
+        width: auto;
+        height: auto;
+     }
+}
